@@ -17,8 +17,8 @@ export function Logomark({
     <Image
       src={logoImage}
       alt="M3 Security Force Logo"
-      height={24}
-      width={24}
+      width={80}
+      height={80}
     />
   )
 }
