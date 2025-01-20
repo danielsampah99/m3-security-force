@@ -19,6 +19,7 @@ import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
 import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import homeImage from '@/images/m3-home-image.jpg'
+import heroImage from '@/images/hero-image.jpg'
 import { type CaseStudy, type MDXEntry, loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
@@ -191,20 +192,44 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
-          <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Securing Ghana&apos;s Future: Your Trusted Security Partner
-          </h1>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are more than just a security company; we are your strategic
-            partner in building a secure and resilient future for your business.
-            We combine cutting-edge technology, rigorous methodologies, and a
-            dedicated team of experts to deliver unparalleled security solutions
-            tailored to your specific needs. Let us help you navigate the
-            complex security landscape and focus on what truly matters – your
-            growth and success.
-          </p>
+      <Container className="relative mt-24 sm:mt-32 md:mt-20">
+        <FadeIn className="mx-auto">
+          <div className="relative z-10 lg:w-full lg:max-w-2xl">
+            <svg
+              viewBox="0 0 100 100"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+              className="absolute inset-y-0 right-8 hidden h-full w-80 translate-x-1/2 transform fill-white lg:block"
+            >
+              <polygon points="0,0 90,0 50,100 0,100" />
+            </svg>
+
+            <div className="relative px-6 py-32 sm:py-40 lg:px-8 lg:py-56 lg:pr-0">
+              <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
+                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+                  Securing Ghana&apos;s Future: Your Trusted Security Partner
+                </h1>
+                <p className="mt-6 text-lg leading-8 text-gray-600">
+                  We are more than just a security company; we are your
+                  strategic partner in building a secure and resilient future
+                  for your business. We combine cutting-edge technology,
+                  rigorous methodologies, and a dedicated team of experts to
+                  deliver unparalleled security solutions tailored to your
+                  specific needs. Let us help you navigate the complex security
+                  landscape and focus on what truly matters – your growth and
+                  success.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-gray-50 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <Image
+              alt="hero"
+              src={heroImage}
+              className="aspect-[3/2] object-cover lg:aspect-auto lg:h-full lg:w-full"
+            />
+          </div>
         </FadeIn>
       </Container>
 
